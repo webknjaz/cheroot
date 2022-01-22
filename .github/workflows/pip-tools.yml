@@ -151,7 +151,7 @@ jobs:
         echo "CURRENT_SRC_OBJECT_TYPE=${CURRENT_SRC_OBJECT_TYPE}";
         if [[ "${GIT_INDEX_OBJECT_SYMLINK_TYPE}" !=
         "${CURRENT_SRC_OBJECT_TYPE}" ]];
-        then;
+        then
         git update-index --add --cacheinfo
         "${GIT_INDEX_OBJECT_SYMLINK_TYPE}" "${SYMLINK_TARGET_HASH}"
         "requirements/${BASE_NAME}.in" &&
