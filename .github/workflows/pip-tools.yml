@@ -237,6 +237,12 @@ jobs:
         || :
       shell: bash
 
+    - name: tmate debug
+      if: failure()
+      uses: mxschmitt/action-tmate@v3
+      with:
+        limit-access-to-actor: true
+
     - name: Log the patch
       if: steps.constraints.outputs.patch
       run: git show --color
